@@ -15,4 +15,12 @@ class Assetimage {
   static const String apartment = "assetes/image/apartment.png";
   static const String lap = "assetes/image/lap.jpg";
   static const String s22 = "assetes/image/s22.jpg";
+
+  /////////////////// logo Image ////////////////////
+
+  static const String logo = "assetes/image/store.png";
+  static const String wall = "assetes/image/wall.jpg";
+  static const String google = "assetes/image/google.png";
+  static const String facebook = "assetes/image/facebook.png";
+  static const String hamza = "assetes/image/hamza.jpg";
 }

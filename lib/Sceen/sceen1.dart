@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:task1/const/appcolor.dart';
-import 'package:task1/widget/customcard.dart';
-import 'package:task1/widget/customcategories.dart';
-import 'package:task1/widget/rowicons.dart';
-import 'package:task1/widget/text.dart';
+import 'package:task1/widget/drawer.dart';
+import 'package:task1/widget/screen1/custombutton.dart';
+import 'package:task1/widget/screen1/customcard.dart';
+import 'package:task1/widget/screen1/customcategories.dart';
+import 'package:task1/widget/screen1/rowicons.dart';
+import 'package:task1/widget/screen1/text.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
@@ -21,32 +23,25 @@ class Screen1 extends StatelessWidget {
         ),
         backgroundColor: AppColor.primerycolor,
       ),
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: CustomDrawer(),
+      ),
       body: Container(
           padding: const EdgeInsets.all(10),
           child: ListView(
-            children: [
-              const Texttitle(
+            children: const [
+              Texttitle(
                 text: "Categories",
                 family: "subtitle",
                 color: Color.fromRGBO(54, 53, 53, 1),
               ),
-              const CustomCategories(),
-              MaterialButton(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                color: AppColor.primerycolor,
-                onPressed: () {},
-                child: const Texttitle(
-                  text: "View All Categories",
-                  family: "subtitle",
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(
+              CustomCategories(),
+              CustomButton(),
+              SizedBox(
                 height: 10,
               ),
-              const RowIcons(),
-              const CustomCard(),
+              RowIcons(),
+              CustomCard(),
             ],
           )),
     );
